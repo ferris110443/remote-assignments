@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 16px;
+}
+
+/*=================header========================*/
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+.logo{
+    text-align: center;
+    margin: 0 16px 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    margin: 0 40px 0 40px;
+    position: relative;
+}
+
+
+.nav-content{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: max-height 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    padding-left:0;
+}
+.nav-prod:hover .nav-content{
+    max-height: 200px;
+}
+
+
+
+.nav-prod-li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+    height: 50px;
+    padding-left:10px
+
+}
+
+
+
+
+
+
+
+.nav-menu div {
+    list-style: none;
+    margin: 20px;
+}
+
+.nav-search-lang{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+.nav-search-lang div{
+    margin:20px
+}
+
+.header{
+    height: 48px;
+}
+
+.header-message{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a73e8;
+    height: 80px;
+}
+
+.header-message span{
+    color:white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/*=================section-1st========================*/
+
+
+.section-1st{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center ;
+    align-items: center;
+    margin: 40px 100px;
+}
+.section-1st>div{
+    flex:1;
+}
+
+.section-1st-l div:first-child{
+    font-size: 100px;
+    font-weight: 900;
+}
+
+.section-1st-l div:nth-child(2){
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.section-1st-r{
+    border: solid #dadce0 1px;
+    border-radius: 12px;
+}
+
+.section-1st-r figure img{
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+.section-1st-r figure figcaption{
+    font-size: 24px;
+    color: #1a73e8;
+    margin: 10px;
+}
+
+
+/*=================section-2nd========================*/
