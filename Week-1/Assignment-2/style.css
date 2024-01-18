@@ -122,20 +122,20 @@ header{
 }
 
 
-@media (max-width:800px){
-    .nav-bar{
-        display: flex;
-        flex-direction: column;
-    }
+/*@media (max-width:800px){*/
+/*    .nav-bar{*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*    }*/
 
-    .nav-menu{
-        display: flex;
-        flex-direction: column;
-    }
+/*    .nav-menu{*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*    }*/
 
-    .box-container p{
-        display: inline-block;
-    }
-}
+/*    .box-container p{*/
+/*        display: inline-block;*/
+/*    }*/
+/*}*/
 
 
