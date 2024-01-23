@@ -3,8 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section class = "nav-bar sticky-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+            <div class="container-fluid">
+                <div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Google for developer</a>
+                </div>
 
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Solutions
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Events
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Learn
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Community
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Developer Profile
+                        </button>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Blog
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo04">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <section class = message-container>
+        <div>
+            Explore over 1,000 chapters across 140 countries and meet like-minded developers like you. <a href="https://gdg.community.dev/events/#/list">Find a Google Developer Group near you .</a>
+        </div>
+    </section>
+
+    <section class = "first-container">
+        <div>
+            <h1>Build smarter Ship faster</h1>
+            <p>Unlock creativity and simplify your workflow with open, integrated solutions.</p>
+        </div>
+        <div>
+            <figure>
+                <img src = "images/gemini-spotlight.png">
+                <figcaption>Meet Google AI Studio, the fastest way to build with Gemini</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class = "second-container">
+        <div>
+            <p>Select interests to filter</p>
+            <p id="create-profile">Create profile</p>
+        </div>
+        <div class = "serviceItem">
+            <div>Ads</div>
+            <div>AI & Machine Learning</div>
+            <div>Android</div>
+            <div>AV/VR</div>
+            <div>C</div>
+            <div>C#</div>
+            <div>ChromeOS</div>
+            <div>Cloud</div>
+            <div>Design</div>
+            <div>Firebase</div>
+            <div>Flutter</div>
+            <div>Google Assistant</div>
+            <div>Google Play</div>
+        </div>
+        <div class = "card-container">
+            <div class="row">
+                <div class="col-sm mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-category">Product</p>
+                            <p class="card-title">Places Library</p>
+                            <p class="card-text">The functions in the Places Library, Maps JavaScript API enable your application to search for places (defined in this API as...</p>
+                            <a href="#" class="btn btn-primary">cloud</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-category">Marketing</p>
+                            <p class="card-title">Cloud SDK - Libraries and Command Line Tools</p>
+                            <p class="card-text">Cloud SDK is a set of tools, including gcloud, gsutil, and bq command-line tools, client libraries & local emulators for...</p>
+                            <a href="#" class="btn btn-primary">cloud</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-category">Product</p>
+                            <p class="card-title">Places Library</p>
+                            <p class="card-text">The functions in the Places Library, Maps JavaScript API enable your application to search for places (defined in this API as...</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm mb-3 mb-sm-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-category">MARKETING</p>
+                            <p class="card-title">Places Library</p>
+                            <p class="card-text">The functions in the Places Library, Maps JavaScript API enable your application to search for places (defined in this API as...</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class = "third-container">
+        <div class = "grid-container">
+            <div class="message-title">Start Building today</div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+            <div class="software-card">
+                <div>
+                    <p>logo</p>
+                </div>
+                <div>
+                    <p>Android</p>
+                    <p>Modern tools to help you build experiences that people love across every Android device.</p>
+                </div>
+            </div>
+        </div>
+        <div class = "view-product-btn">
+            <button>View all developer products</button>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

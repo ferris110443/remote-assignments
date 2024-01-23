@@ -1,0 +1,178 @@
+/*============================body==================*/
+*{
+    box-sizing: border-box;
+}
+
+
+
+
+/*============================navbar==================*/
+#navbarTogglerDemo04{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.nav-bar{
+    box-shadow: 0px 5px rgb(0, 0, 0,0.1);
+}
+
+
+
+/*============================message==================*/
+.message-container{
+    display: flex;
+    background-color: #1a73e8;
+    padding: 20px 24px;
+}
+
+.message-container div,a{
+    color:white;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/*============================first section==================*/
+.first-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 150px 40px 150px;
+}
+
+.first-container>div{
+    flex: 1;
+}
+.first-container>div>h1{
+    font-size: 100px;
+    font-weight: bolder;
+}
+.first-container>div>p{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.first-container img{
+    width: 100%;
+    border-radius: 8px 8px 0 0
+}
+
+.first-container div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dadce0;
+    border-radius: 8px
+}
+
+.first-container figcaption{
+    font-size: 24px;
+    color: #1a73e8;
+    padding-left: 20px;
+}
+
+/*============================second section==================*/
+.second-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f3f4;
+    padding: 40px 150px 40px 150px;
+    gap: 16px;
+
+}
+.second-container div:first-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+#create-profile{
+    color: #1a73e8;
+}
+
+.serviceItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.serviceItem >div{
+    background-color: white;
+    border:1px solid #dadce0;
+    padding: 5px 15px;
+    border-radius: 10px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    gap: 10px;
+}
+.card-category{
+    flex: 1;
+    font-size: 12px;
+}
+.card-title{
+    flex:3;
+    font-size: 20px;
+}
+
+.card-body > a{
+    margin-left: 0;
+}
+
+.row{
+    margin: 5px;
+}
+
+/*============================third section==================*/
+.grid-container{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:80px 240px 240px 240px;
+    grid-gap: 20px;
+    padding: 40px 150px 40px 150px;
+}
+
+.message-title{
+    grid-column: span 4;
+    font-size: 48px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.software-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 32px 25px;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+}
+.software-card p{
+    text-align: center;
+}
+
+.view-product-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view-product-btn button{
+    border-style: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #1a73e8;
+    padding: 5px 10px;
+}
