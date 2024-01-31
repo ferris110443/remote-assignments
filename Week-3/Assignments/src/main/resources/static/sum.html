@@ -5,14 +5,13 @@
     <title>Title</title>
 </head>
 <body>
-    <form method = "GET" id="sumForm">
-        <label> Please enter a number </label>
-        <input type="text" name="number" id="number"><br>
-        <label> Press submit to return 1+2+....num </label>
-        <input type="submit" value="submit">
-    </form>
-    <div> the result is : <span id="answer"></span></div>
-
-    <script src="script.js"></script>
+<form method="GET" id="sumForm" action="sum">
+    <label for="number">Please enter a number</label>
+    <input type="text" name="number" id="number"><br>
+    <p> Press submit to return 1+2+....num </p>
+    <input type="submit" value="submit">
+</form>
+<div> the result is : <span id="answer"></span></div>
+<script src="script.js"></script>
 </body>
 </html>

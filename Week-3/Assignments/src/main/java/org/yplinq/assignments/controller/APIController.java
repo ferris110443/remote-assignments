@@ -1,4 +1,5 @@
 package org.yplinq.assignments.controller;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,37 +10,42 @@ import org.springframework.web.bind.annotation.RestController;
 public class APIController {
 
     @GetMapping("/")
-    public String Home(){
+    public String Home() {
         return "Hello, My Server!";
     }
 
     @GetMapping("/data")
-    public String getNumber(@RequestParam(name = "number",required = false) String xyz){
-        System.out.println(xyz);
-
-        if (xyz == null) {
+    public String getNumber(@RequestParam(name = "number", required = false) String userInput) {
+        System.out.println("userInput :" + userInput);
+        if (userInput.isEmpty()) {
+            System.out.println("Lack of Parameter");
             return "Lack of Parameter";
         }
+
         try {
-            int num = Integer.parseInt(xyz); //parseInt fail will throw error before continue,所以要放在try 裡面
-            return (num>0?sumOfSeq(num).toString():"Wrong Parameter" );
+            long num = Long.parseLong(userInput); //parseInt fail will throw error before continue, keep in try statement
+            if (num > 0) {
+                return sumOfSeq(num).toString();
+            } else {
+                System.out.println("Wrong Parameter");
+                return "Wrong Parameter";
+            }
+
         } catch (Exception e) {
+            System.out.println("Wrong Parameter");
             return "Wrong Parameter";
         }
-
     }
+
 
     /**
      * Add up all the number from 1 to the number. Return the result
+     *
      * @param num : the num you want to addup from 1 ,
      * @return sum of (1+2+3+...+num)
      */
-    private Integer sumOfSeq(int num){
-        int sumOfNum=0;
-        for(int i=0;i<=num;i++){
-            sumOfNum+=i;
-        }
-        return sumOfNum;
+    public Long sumOfSeq(long num) {
+        return num * (num + 1) / 2;
     }
 
 }
