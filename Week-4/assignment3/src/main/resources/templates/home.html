@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<section>
+    <div>
+        <form action="/signIn" id="signIn-form" method="post">
+            <p> SignIn:</p>
+            <label for="userSignInEmail"> User Email</label>
+            <input id="userSignInEmail" name="userSignInEmail" type="text">
+            <label for="userSignInPassword"> User Password</label>
+            <input id="userSignInPassword" name="userSignInPassword" type="password">
+            <label for="signIn-btn"> Sign In </label>
+            <input id="signIn-btn" type="submit" value="Login">
+        </form>
+    </div>
+
+    <div>
+        <form action="/signUp" id="signUp-form" method="post">
+            <p> Sign Up:</p>
+            <label for="userSignUpEmail"> User Email</label>
+            <input id="userSignUpEmail" name="userSignUpEmail" type="text">
+            <label for="userSignUpPassword"> User Password</label>
+            <input id="userSignUpPassword" name="userSignUpPassword" type="password">
+            <label for="SignUp-btn"> Login </label>
+            <input id="SignUp-btn" type="submit" value="Sign Up">
+        </form>
+    </div>
+
+    <div th:if="${alertMessage}">
+        <script th:inline="javascript">
+            alert([[${alertMessage}]]);
+        </script>
+    </div>
+
+
+</section>
+
+</body>
+</html>
