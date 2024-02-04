@@ -6,7 +6,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.yplinq.assignment3.entity.UserInformation;
 import org.yplinq.assignment3.repository.UserInformationRepository;
 
@@ -22,6 +25,11 @@ public class UserController {
     @Autowired
     private UserInformationRepository userInformationRepository;
 
+
+    @GetMapping("/")
+    public String rootController() {
+        return "home";
+    }
     @GetMapping("/home")
     public String homeController() {
         return "home";
@@ -96,17 +104,6 @@ public class UserController {
         model.addAttribute("successLoginMessage", "Login successfully");
         model.addAttribute("userEmail", userEmail);
         return "memberPage";
-    }
-
-    /**
-     * Render all user email / password in response body, findAll() return iterable
-     *
-     * @return: return list of userInformation in a JSON format
-     */
-    @GetMapping("/all")
-    @ResponseBody // return value should be written to response body , not treated as view
-    public Iterable<UserInformation> getAllUsers() {
-        return userInformationRepository.findAll();
     }
 
 

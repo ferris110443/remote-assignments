@@ -13,7 +13,7 @@ public class UserInformation {
     // avoid restart server id increase default allocationSize 50
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "allocationSizeOneGenerator")
-    private Integer id;
+    private Integer user_information_id;
     private String email;
     private String password;
 
@@ -24,7 +24,7 @@ public class UserInformation {
     @Override
     public String toString() {
         return "UserInformation{" +
-                "id=" + id +
+                "id=" + user_information_id +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
@@ -32,11 +32,11 @@ public class UserInformation {
 
 
     public Integer getId() {
-        return id;
+        return user_information_id;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.user_information_id = id;
     }
 
     public String getEmail() {

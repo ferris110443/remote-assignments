@@ -1,15 +1,15 @@
 -- 1. Write an SQL statement to select all articles with their author’s email.
 
-SELECT user_information.email, user_article.title, user_article.content
-FROM user_information
-         JOIN user_article
-              ON user_information.id = user_article.author_Id;
+SELECT inf.email, art.title, art.content
+FROM user_information AS inf
+         JOIN user_articles AS art
+              ON inf.user_information_id = art.user_information_id;
 
 -- 2. Write another SQL statement to select articles from 7th to 12th sorted by id.
 
-SELECT user_article.id, user_information.email, user_article.title, user_article.content
-FROM user_information
-         JOIN user_article
-              ON user_information.id = user_article.author_Id
-WHERE user_article.id BETWEEN 7 AND 12
-ORDER BY user_article.id ASC;
+SELECT art.user_article_id, inf.email, art.title, art.content
+FROM user_information AS inf
+         JOIN user_articles AS art
+              ON inf.user_information_id = art.user_information_id
+WHERE art.user_article_id BETWEEN 7 AND 12
+ORDER BY art.user_article_id ASC;
