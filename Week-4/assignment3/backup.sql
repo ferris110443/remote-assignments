@@ -58,7 +58,9 @@ CREATE TABLE `user_articles` (
   `title` varchar(45) DEFAULT NULL,
   `content` text,
   `author` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`user_article_id`)
+  PRIMARY KEY (`user_article_id`),
+  KEY `user_information_id_idx` (`user_information_id`),
+  CONSTRAINT `user_information_id` FOREIGN KEY (`user_information_id`) REFERENCES `user_information` (`user_information_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -68,7 +70,7 @@ CREATE TABLE `user_articles` (
 
 LOCK TABLES `user_articles` WRITE;
 /*!40000 ALTER TABLE `user_articles` DISABLE KEYS */;
-INSERT INTO `user_articles` VALUES (1,1,'Day 1','Day 1 diary ..............................','Tony'),(2,1,'Day 2','Day 2 diary ..............................','Tony'),(3,1,'Day 3','Day 3 diary ..............................','Tony'),(4,1,'Day 4','Day 4 diary ..............................','Tony'),(5,1,'Day 5','Day 5 diary ..............................','Tony'),(6,1,'Day 6','Day 6 diary ..............................','Tony'),(7,1,'Day 7','Day 7 diary ..............................','Tony'),(8,2,'Day 1','Day 1 diary ..............................','Jack'),(9,2,'Day 2','Day 2 diary ..............................','Jack'),(10,2,'Day 3','Day 3 diary ..............................','Jack'),(11,2,'Day 4','Day 4 diary ..............................','Jack'),(12,2,'Day 5','Day 5 diary ..............................','Jack'),(13,2,'Day 6','Day 6 diary ..............................','Jack'),(14,2,'Day 7','Day 7 diary ..............................','Jack'),(15,2,'Day 8','Day 8 diary ..............................','Jack'),(16,3,'Day 3','Day 3 diary ..............................','Jane'),(17,3,'Day 4','Day 4 diary ..............................','Jane'),(18,3,'Day 5','Day 5 diary ..............................','Jane'),(19,3,'Day 6','Day 6 diary ..............................','Jane'),(20,3,'Day 7','Day 7 diary ..............................','Jane'),(21,3,'Day 8','Day 8 diary ..............................','Jane'),(22,4,'Day 1','Day 1 diary ..............................','Bevis'),(23,4,'Day 2','Day 2 diary ..............................','Bevis'),(24,4,'Day 3','Day 3 diary ..............................','Bevis'),(25,4,'Day 4','Day 4 diary ..............................','Bevis'),(26,4,'Day 5','Day 5 diary ..............................','Bevis'),(27,4,'Day 6','Day 6 diary ..............................','Bevis'),(28,5,'Day 1','Day 1 diary ..............................','Wilson'),(29,5,'Day 2','Day 2 diary ..............................','Wilson'),(30,5,'Day 3','Day 3 diary ..............................','Wilson'),(31,5,'Day 5','Day 4 diary ..............................','Wilson');
+INSERT INTO `user_articles` VALUES (1,1,'Day 1','Day 1 diary ..............................','Tony'),(2,1,'Day 2','Day 2 diary ..............................','Tony'),(3,1,'Day 3','Day 3 diary ..............................','Tony'),(4,1,'Day 4','Day 4 diary ..............................','Tony'),(5,1,'Day 5','Day 5 diary ..............................','Tony'),(6,1,'Day 6','Day 6 diary ..............................','Tony'),(7,1,'Day 7','Day 7 diary ..............................','Tony'),(8,2,'Day 1','Day 1 diary ..............................','Jack'),(9,2,'Day 2','Day 2 diary ..............................','Jack'),(10,2,'Day 3','Day 3 diary ..............................','Jack'),(11,2,'Day 4','Day 4 diary ..............................','Jack'),(12,2,'Day 5','Day 5 diary ..............................','Jack'),(13,2,'Day 6','Day 6 diary ..............................','Jack'),(14,2,'Day 7','Day 7 diary ..............................','Jack'),(15,2,'Day 8','Day 8 diary ..............................','Jack'),(16,3,'Day 3','Day 3 diary ..............................','Jane'),(17,3,'Day 4','Day 4 diary ..............................','Jane'),(18,3,'Day 5','Day 5 diary ..............................','Jane'),(19,3,'Day 6','Day 6 diary ..............................','Jane'),(20,3,'Day 7','Day 7 diary ..............................','Jane'),(21,3,'Day 8','Day 8 diary ..............................','Jane'),(22,4,'Day 1','Day 1 diary ..............................','Bevis'),(23,4,'Day 2','Day 2 diary ..............................','Bevis'),(24,4,'Day 3','Day 3 diary ..............................','Bevis'),(25,4,'Day 4','Day 4 diary ..............................','Bevis'),(26,4,'Day 5','Day 5 diary ..............................','Bevis'),(27,4,'Day 6','Day 6 diary ..............................','Bevis'),(28,5,'Day 1','Day 1 diary ..............................','Wilson'),(29,5,'Day 2','Day 2 diary ..............................','Wilson'),(30,5,'Day 3','Day 3 diary ..............................','Wilson'),(31,5,'Day 5','Day 4 diary ..............................','Wilson'),(32,8,'test','test','test');
 /*!40000 ALTER TABLE `user_articles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,8 +85,7 @@ CREATE TABLE `user_information` (
   `user_information_id` int NOT NULL,
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`user_information_id`),
-  CONSTRAINT `user_information_id` FOREIGN KEY (`user_information_id`) REFERENCES `user_articles` (`user_article_id`)
+  PRIMARY KEY (`user_information_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -107,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-02-05  2:05:22
+-- Dump completed on 2024-02-05  3:30:20
